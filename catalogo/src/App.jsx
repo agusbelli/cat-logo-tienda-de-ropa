@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-
+import './CatalogoDigital.css';
 import logo from "../public/logo.png"
 import Catalogo from './vistas/catalogo';
 import Edicion from './vistas/edicion';
