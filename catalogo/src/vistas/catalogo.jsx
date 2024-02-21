@@ -8,6 +8,7 @@ import remera6 from "../../public/remeras/remera6.jpeg"
 import remera7 from "../../public/remeras/remera7.jpeg"
 import remera8 from "../../public/remeras/remera8.jpeg"
 import remera9 from "../../public/remeras/remera9.jpeg"
+import '../CatalogoDigital.css';
 
 const Catalogo = ()=>{
     // Arreglo de objetos de ejemplo para probar los componentes

@@ -1,3 +1,6 @@
+import '../CatalogoDigital.css';
+
+
 const Edicion = ()=>{
  
 return(

@@ -1,4 +1,3 @@
-import './CatalogoDigital.css';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 import logo from "../public/logo.png"
@@ -14,8 +13,10 @@ const App = () => {
         {/* Icono de la marca */}
         <img className="brand-icon" src={logo} alt="Icono de la marca" />
       </header>
+      <Routes>
       <Route path="/" element={<Catalogo />} />
       <Route path="/carcass-edicion" element={<Edicion />} />
+      </Routes>
       <footer className="footer">
         {/* Pie de página con tu nombre */}
         <p>desarrollado por aaaaaa</p>
