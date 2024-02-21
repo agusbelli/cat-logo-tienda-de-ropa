@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Forque';
+  src: url('../fonts/Forque.ttf') format('woff2');
+  /* Puedes incluir múltiples formatos de fuentes para mayor compatibilidad */
+  font-weight: normal;
+  font-style: normal;
+}
+
 .producto-card {
     margin: 10px;
     text-align: center;
