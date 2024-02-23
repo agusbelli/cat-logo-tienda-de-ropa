@@ -19,7 +19,7 @@ const App = () => {
           </Routes>
       <footer className="footer">
         {/* Pie de página con tu nombre */}
-        <p>desarrollado por aaaa</p>
+        <p>desarrollado por ssssaaa</p>
       </footer>
     </div>
     </>
