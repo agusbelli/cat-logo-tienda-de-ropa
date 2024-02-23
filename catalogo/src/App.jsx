@@ -7,22 +7,24 @@ import Edicion from './vistas/edicion';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <>
     <div className="catalogo-container">
       <header className="header">
         {/* Icono de la marca */}
         <img className="brand-icon" src={logo} alt="Icono de la marca" />
       </header>
-      <Routes>
-      <Route path="/" element={<Catalogo />} />
-      <Route path="/carcass-edicion" element={<Edicion />} />
-      </Routes>
+        <BrowserRouter>
+          <Routes>
+          <Route path="/" element={<Catalogo />} />
+          <Route path="/carcass-edicion" element={<Edicion />} />
+          </Routes>
+        </ BrowserRouter>
       <footer className="footer">
         {/* Pie de página con tu nombre */}
         <p>desarrollado por aaaaaa</p>
       </footer>
     </div>
-    </ BrowserRouter>
+    </>
 
   );
 };
