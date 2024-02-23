@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ProductoEditable from '../componentes/productoEditable';
 import { useEffect } from 'react';
 import { getProductos } from '../redux/actions/actionsProductos';
+import Login from '../componentes/login/login';
 
 
 const Edicion = ()=>{
@@ -26,7 +27,9 @@ return(
           ))}
       </div>
     )
-    :(<p>No tienes autorización para ver esta página.</p>)
+    :(<div className="productos-container">
+      <Login />
+      </div>)
     }
       
   </div>

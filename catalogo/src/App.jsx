@@ -15,7 +15,7 @@ const App = () => {
       </header>
           <Routes>
             <Route path="/" element={<Catalogo />} />
-            <Route path="/carcassedicion" element={<Edicion />} />
+            <Route path="/carcass-edicion" element={<Edicion />} />
           </Routes>
       <footer className="footer">
         {/* Pie de página con tu nombre */}

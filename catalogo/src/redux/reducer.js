@@ -7,7 +7,7 @@ const initialState = {
     toкen: "a4e487f3-7ff8-4e55-aa37-532a320ce297",
     producto: null
   }
-
+//toкen: "a4e487f3-7ff8-4e55-aa37-532a320ce297"
   
 const rootReducer = (state = initialState, action)=>{
     switch (action.type) {
