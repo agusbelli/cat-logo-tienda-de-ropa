@@ -23,8 +23,8 @@ const ProductoEditable = ({ producto }) => {
         <img className="producto-img" src={producto.foto} alt='foto1'/>
         <img className="producto-img" src={producto.fotoDorso} alt='foto2'/>
         <p>{producto.nombre}</p>
-      <button style={{'border': `none`,'borderRadius':'10px','textAlign':' center','width': '50px','height': '30px', 'color': 'white', 'backgroundColor':'black', 'margin': '5px', 'cursor':'pointer'}}onClick={handleClick}>✏</button>
-      <button style={{'border': `none`,'borderRadius':'10px','textAlign':' center','width': '50px','height': '30px', 'color': 'white', 'backgroundColor':'black', 'margin': '5px', 'cursor':'pointer'}} onClick={eliminar}>✖</button>
+      <button style={{'border': `none`,'borderRadius':'10px','textAlign':' center','width': '50px','height': '40px', 'color': 'white', 'backgroundColor':'black', 'margin': '5px', 'cursor':'pointer'}}onClick={handleClick}>✏</button>
+      <button style={{'border': `none`,'borderRadius':'10px','textAlign':' center','width': '50px','height': '40px', 'color': 'white', 'backgroundColor':'black', 'margin': '5px', 'cursor':'pointer'}} onClick={eliminar}>✖</button>
       </div>
     </div>
   );

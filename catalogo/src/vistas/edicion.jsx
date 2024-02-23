@@ -20,7 +20,7 @@ return(
     {toкen
     ?(
       <div className="productos-container">    
-      <h1 className='titulo'>Panel de productos</h1>
+      <h1 className='titulo'>Panel de Edicion</h1>
         
         {productos?.map(producto => (
           <ProductoEditable  key={producto.id} producto={producto} />
