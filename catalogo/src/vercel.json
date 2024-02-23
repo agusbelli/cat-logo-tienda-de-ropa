@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+        {"source": "/carcassedicion", "destination": "/carcassedicion"},
+        {"source": "/(.*)", "destination": "/"}
+    ]
+}
