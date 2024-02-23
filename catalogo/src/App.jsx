@@ -16,12 +16,12 @@ const App = () => {
         <BrowserRouter>
           <Routes>
           <Route path="/" element={<Catalogo />} />
-          <Route path="/carcass-edicion" element={<Edicion />} />
+          <Route path="carcass-edicion" element={<Edicion />} />
           </Routes>
         </ BrowserRouter>
       <footer className="footer">
         {/* Pie de página con tu nombre */}
-        <p>desarrollado por aaaaaa</p>
+        <p>desarrollado por aadada</p>
       </footer>
     </div>
     </>
