@@ -15,11 +15,11 @@ const App = () => {
       </header>
           <Routes>
             <Route path="/" element={<Catalogo />} />
-            <Route path="carcass-edicion" element={<Edicion />} />
+            <Route path="/carcass-edicion" element={<Edicion />} />
           </Routes>
       <footer className="footer">
         {/* Pie de página con tu nombre */}
-        <p>desarrollado por aadada</p>
+        <p>desarrollado por aaaa</p>
       </footer>
     </div>
     </>
