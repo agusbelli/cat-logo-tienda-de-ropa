@@ -2,9 +2,16 @@ import { Router } from "express";
 import { prisma } from "../db.js";
 
 const router = Router();
+
+
+//credentials
 const token = "a4e487f3-7ff8-4e55-aa37-532a320ce297";
+const username = "carcassurban";
+const password = "carcassurban4303";
 
 
+
+//rutas productossssss
 router.get("/products", async (req, res) => {
 	try {
 		const products = await prisma.product.findMany();
@@ -16,8 +23,9 @@ router.get("/products", async (req, res) => {
 
 router.post("/products", async (req, res) => {
 	try {
-		const datosFront= req.body;
+		const datosFront = req.body;
 		let data = datosFront.data;
+		console.log(data);
 		const tokenFront = datosFront.tokenFront;
 		if (tokenFront === token) {		
 			if (!data.fotoDorso) {
@@ -80,5 +88,29 @@ router.put("/products/:id", async (req, res) => {
 		res.json(error);
 	}
 });
+
+
+//rutas login
+router.post("/login", async (req, res) => {
+	try {
+		const datos = req.body;
+		if (datos.username === username) {		
+			if (datos.password === password) {
+				res.json(token);
+			}else{
+				console.log("no pase las pruebas", datos);
+				throw new Error("Usuario o contraseña incorrecta")
+			}	
+		}else{
+			console.log("no pase las pruebas", datos);
+			throw new Error("Usuario o contraseña incorrecta")
+		}
+	} catch (error) {
+		res.json(null);
+	}
+});
+
+
+
 
 export default router;

@@ -4,10 +4,9 @@ import { GET_TOKEN } from "./actions/actionsToкen.js";
 
 const initialState = {
     productos: null,
-    toкen: "a4e487f3-7ff8-4e55-aa37-532a320ce297",
+    token: null,
     producto: null
   }
-//toкen: "a4e487f3-7ff8-4e55-aa37-532a320ce297"
   
 const rootReducer = (state = initialState, action)=>{
     switch (action.type) {
@@ -16,7 +15,7 @@ const rootReducer = (state = initialState, action)=>{
         case GET_PRODUCTO:
             return {...state, producto:action.payload};
         case GET_TOKEN:
-            return {...state, producto:action.payload};
+            return {...state, token:action.payload};
             default:
             return {...state}
     }

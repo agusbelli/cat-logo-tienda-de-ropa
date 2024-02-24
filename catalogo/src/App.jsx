@@ -3,6 +3,7 @@ import './CatalogoDigital.css';
 import logo from "../public/logo.png"
 import Catalogo from './vistas/catalogo';
 import Edicion from './vistas/edicion';
+import AddProducto from "./vistas/addProducto";
 
 
 const App = () => {
@@ -16,11 +17,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Catalogo />} />
             <Route path="/carcass-edicion" element={<Edicion />} />
+            <Route path="/carcass-edicion/:id" element={<Edicion />} />
+            <Route path="/carcass-nuevoproducto" element={<AddProducto />} />
           </Routes>
-      <footer className="footer">
-        {/* Pie de página con tu nombre */}
-        <p>desarrollado por ssssaaa</p>
-      </footer>
     </div>
     </>
 

@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import './login.css';
+import { useDispatch } from 'react-redux';
+import { getToken } from '../../redux/actions/actionsToкen';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const dispatch = useDispatch();
 
   const volverAlCatalogo = () => {
     window.location.href = '/';
@@ -16,10 +19,9 @@ const Login = () => {
       setError('Por favor, completa todos los campos.');
       return;
     }
-    // Aquí puedes agregar la lógica de autenticación
-    console.log('Nombre de usuario:', username);
-    console.log('Contraseña:', password);
+    dispatch(getToken({ username, password }));
   };
+
 
   return (
     <div className="login-container">

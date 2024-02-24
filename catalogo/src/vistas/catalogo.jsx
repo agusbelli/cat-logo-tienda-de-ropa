@@ -3,6 +3,7 @@ import '../CatalogoDigital.css';
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductos } from "../redux/actions/actionsProductos";
+import LoadingComponent from "../componentes/loading/loading";
 
 const Catalogo = ()=>{
     // Arreglo de objetos de ejemplo para probar los componentes
@@ -21,7 +22,7 @@ return(
       ?productos.map(producto => (
       <Producto key={producto.id} producto={producto} />
     ))
-    :"Cargando..."
+    :(<LoadingComponent />)
     }
   </div>
 )

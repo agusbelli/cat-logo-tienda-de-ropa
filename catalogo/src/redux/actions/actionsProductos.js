@@ -17,11 +17,13 @@ export const postProducto = (newData) => {
         try {
             const data = await axios.post(`http://localhost:3000/server/products`, newData);
             console.log(data);
-            const redireccionar = ()=>{return window.location='/'}; 
+            const redireccionar = ()=>{return window.location='/carcass-nuevoproducto'}; 
             //si sale bien pido todo de nuevo
             const data2 = await axios.get(`http://localhost:3000/server/products`);
             const productos = data2.data;            
             dispatch({ type: GET_PRODUCTOS, payload: productos });
+            alert("¡Producto  creado correctamente!");
+            setTimeout(redireccionar(),1500);
             redireccionar()
         } catch (error) {
             console.log(error);
@@ -48,16 +50,18 @@ export const putProducto = (newData, id) => {
     };
 }
 
-export const eliminarProducto = (toкen, id) => {
-    const toкenFront = toкen;
+export const eliminarProducto = (token, id) => {
+    const tokenFront = token;
     return async function (dispatch){
-        const data = await axios.delete(`http://localhost:3000/server/products/${id}?tokenFront=${toкenFront}`);
+        const data = await axios.delete(`http://localhost:3000/server/products/${id}?tokenFront=${tokenFront}`);
         console.log(data);
         const redireccionar = ()=>{return window.location='/carcass-edicion'}; 
         //si sale bien pido todo de nuevo
         const data2 = await axios.get(`http://localhost:3000/server/products`);
         const productos = data2.data;            
         dispatch({ type: GET_PRODUCTOS, payload: productos });
+        alert("¡Producto  eliminado correctamente!");
+        setTimeout(redireccionar(),1500);
         redireccionar()
         dispatch({ type: GET_PRODUCTO, payload: productos });
     };
