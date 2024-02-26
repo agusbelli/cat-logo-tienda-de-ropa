@@ -15,11 +15,5 @@
     ],
     "env": {
       "NODE_ENV": "production"
-    },
-    "build": {
-      "commands": {
-        "prisma:migrate": "npm run prisma:migrate",
-        "prisma:generate": "npm run prisma:generate"
-      }
+    }
   }
-}
