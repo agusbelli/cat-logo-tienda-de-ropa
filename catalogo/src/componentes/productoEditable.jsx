@@ -6,10 +6,10 @@ import { eliminarProducto } from '../redux/actions/actionsProductos';
 const ProductoEditable = ({ producto }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const toкen = useSelector((state)=>state.toкen)
+  const  codigo = localStorage.getItem("token");
 
   const eliminar = ()=>{
-    dispatch(eliminarProducto(toкen, producto?.id))
+    dispatch(eliminarProducto(codigo, producto?.id))
     .then(()=>navigate('/carcass-edicion'))
   }
   
