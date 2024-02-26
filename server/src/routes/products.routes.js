@@ -14,9 +14,9 @@ const password = "carcassurban4303";
 //rutas productossssss
 router.get("/products", async (req, res) => {
 	try {
-		res.send("hola en products")
-/* 		const products = await prisma.product.findMany();
-		res.json(products); */
+		const products = await prisma.product.findMany();
+		console.log("resolvi");
+		res.json(products);
 	} catch (error) {
 		res.json(error);
 	}
