@@ -52,13 +52,15 @@ router.get("/products/:id", async (req, res) => {
 	res.json(error);
 });
 
-router.delete("/products/:id", async (req, res) => {
+router.delete("/products", async (req, res) => {
 	try {
 		const {tokenFront} = req.query;
+		const {id} = req.query;
+
 		if (tokenFront === token) {			
 			const product = await prisma.product.delete({
 				where: {
-					id: Number(req.params.id),
+					id: Number(id),
 				},
 			});
 			res.json(product.quantity);
