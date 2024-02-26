@@ -54,6 +54,7 @@ export const putProducto = (newData, id) => {
 export const eliminarProducto = (token, id) => {
     const tokenFront = token;
     return async function (dispatch){
+        console.log(token, "id=", id);
         const data = await axios.delete(`${urlServer}/products?id=${id}&tokenFront=${tokenFront}`);
         console.log(data);
         const redireccionar = ()=>{return window.location='/carcass-edicion'}; 
