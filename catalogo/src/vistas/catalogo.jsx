@@ -17,7 +17,7 @@ const Catalogo = ()=>{
     
 return(
     <div className="productos-container">
-    <h2 className='titulo'>NUESTRO CATALOGO</h2>
+    <h2 className='titulo'>Nuestro Catalogo</h2>
     {productos
       ?productos.map(producto => (
       <Producto key={producto.id} producto={producto} />
