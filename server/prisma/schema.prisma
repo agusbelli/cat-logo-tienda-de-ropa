@@ -8,10 +8,9 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url = "postgres://default:tYS56KeQnkwy@ep-noisy-wind-a4vlhneq-pooler.us-east-1.aws.neon.tech/verceldb?pgbouncer=true&connect_timeout=15&sslmode=require" // uses connection pooling
-  directUrl = "postgres://default:tYS56KeQnkwy@ep-noisy-wind-a4vlhneq.us-east-1.aws.neon.tech/verceldb?sslmode=require" // uses a direct connection
+  url = env("CARCASS_PRISMA_URL") // uses connection pooling
+  directUrl = env("CARCASS_URL_NON_POOLING") // uses a direct connection
 }
-
 model Product {
   id Int @id @default(autoincrement())
   nombre String
